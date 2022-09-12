@@ -1,7 +1,7 @@
 <?php
 try{
-    $user = 'shiibashi';
-    $pass = 'myadmin';
+    $user = 'mysql';
+    $pass = 'mysql';
     $dbh = new PDO('mysql:host=localhost;dbname=db1; charset=utf8',$user,$pass);
     $dbh -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $sql = 'select * from recipes';
