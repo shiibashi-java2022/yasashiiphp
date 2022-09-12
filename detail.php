@@ -9,7 +9,7 @@ try{
     $id = (int)$_GET["id"];
     $dbh = new PDO("mysql:host=localhost;dbname=db1;charset=utf8",$user,$pass);
     $dbh -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-    $aql = "select * from recipes where id = ?";
+    $sql = "select * from recipes where id = ?";
     $stmt = $dbh ->prepare($sql);
     $stmt -> bindValue(1,$id,PDO::PARAM_INT);
     $stmt -> execute();
